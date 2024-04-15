@@ -1,21 +1,22 @@
-# p2p_network/views.py
-
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import Transaction
+from p2p_network.models import Transaction
 
 @login_required
 def make_transaction(request):
     if request.method == 'POST':
         receiver_username = request.POST.get('receiver_username')
         amount = request.POST.get('amount')
-        receiver = User.objects.get(username=receiver_username)
+        memo = request.POST.get('memo')
+        try:
+            receiver = User.objects.get(username=receiver_username)
+        except User.DoesNotExist:
+            return render(request, 'p2p_network/make_transaction.html', {'error_message': 'Receiver username does not exist.'})
         sender = request.user
-        Transaction.objects.create(sender=sender, receiver=receiver, amount=amount)
+        Transaction.objects.create(sender=sender, receiver=receiver, amount=amount, memo=memo)
         return redirect('view_transactions')
     return render(request, 'p2p_network/make_transaction.html')
-
 @login_required
 def view_transactions(request):
     user = request.user

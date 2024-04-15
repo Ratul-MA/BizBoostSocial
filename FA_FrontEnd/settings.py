@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'FA_overview',
     'Registration',
     'Bizzer_SocialMedia',
+    'p2p_network',
 ]
 
 MIDDLEWARE = [

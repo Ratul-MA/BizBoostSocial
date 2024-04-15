@@ -1,25 +1,103 @@
-<!-- p2p_network/templates/p2p_network/make_transaction.html -->
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  /* Style for the main content */
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://media.giphy.com/media/vGYM50GYlAbd18cVqG/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text color for the entire page */
+  }
 
-<form method="post">
-    {% csrf_token %}
-    <label for="receiver_username">Receiver Username:</label>
-    <input type="text" name="receiver_username">
-    <label for="amount">Amount:</label>
-    <input type="text" name="amount">
-    <button type="submit">Send</button>
-</form>
-<!-- p2p_network/templates/p2p_network/view_transactions.html -->
+  .container {
+    padding: 20px;
+  }
 
-<h2>Sent Transactions</h2>
-<ul>
-    {% for transaction in sent_transactions %}
-        <li>{{ transaction.receiver.username }} - {{ transaction.amount }}</li>
-    {% endfor %}
-</ul>
+  /* Style for the card */
+  .card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the card */
+    border-radius: 10px;
+    padding: 20px;
+  }
 
-<h2>Received Transactions</h2>
-<ul>
-    {% for transaction in received_transactions %}
-        <li>{{ transaction.sender.username }} - {{ transaction.amount }}</li>
-    {% endfor %}
-</ul>
+  /* Style for the form */
+  .form-label {
+    color: #333; /* Form label text color */
+  }
+
+  .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  /* Style for the submit button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  /* Add any additional styles as needed */
+</style>
+
+<div class="container mt-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'Bizzer' %}">Bizzer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Add your navbar links here -->
+                </ul>
+                {% if user.is_authenticated %}
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-link navbar-brand">
+          <a href="{% url 'profile' request.user.id %}">
+
+          </a>
+        </li>
+      </ul>
+
+                        </a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title mb-4">Make Transaction</h5>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="receiver_username" class="form-label">Receiver Username</label>
+                    <input type="text" class="form-control" id="receiver_username" name="receiver_username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="text" class="form-control" id="amount" name="amount" required>
+                </div>
+                <div class="mb-3">
+                    <label for="memo" class="form-label">Memo (Optional)</label>
+                    <textarea class="form-control" id="memo" name="memo" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
