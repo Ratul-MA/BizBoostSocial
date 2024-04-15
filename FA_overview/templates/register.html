@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+
+    <link href=static/style.css rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href={% static "img/BizBoost.jpeg" %} >
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href={% static "lib/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href={% static "css/style1.css" %} rel="stylesheet">
+    <title> Registration  | BizBoost </title>
+
+</head>
+
+<div class="wrapper">
+    {% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            There was an error with your form...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+
+    {% endif %}
+
+    <body>
+    <div class="wrapper">
+        <h1>Register</h1>
+        <br/>
+
+        <form action="{% url 'register' %}" method=POST>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <br/><br/>
+            <input type="submit" value="Submit" class="btn btn-secondary">
+
+        </form>
+    </div>
+    </body>
+
+    <br/><br/>
+{% endblock %}
+</div>

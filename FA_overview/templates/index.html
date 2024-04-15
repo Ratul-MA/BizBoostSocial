@@ -1,0 +1,755 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BizBoost</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicon -->
+  <link href=static"img/lg.jpeg" >
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href={% static "lib/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href={% static "lib/font-awesome/css/font-awesome.min.css"  %} rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href={% static "css/style.css" %} rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: BIG biz
+    Theme URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
+    Author: M Alam
+    Author URL:n/a
+  ======================================================= -->
+</head>
+
+<!-- Page Content
+  ================================================== -->
+<!-- Hero -->
+
+<section class="hero">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="hero-brand" href="#contact" title="Home"
+        ></a>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <h1>
+        Welcome to BizBoost
+      </h1>
+
+      <p class="tagline">
+        Empower Dreams with BizBoost: Where Capital Meets Entrepreneurship!
+      </p>
+      {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+        {% endif %}
+    </div>
+  </div>
+
+</section>
+<!-- /Hero -->
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+
+
+
+    <div class="pull-left">
+      {% if user.is_authenticated %}
+      <div id="logo" class="pull-left">
+         <a href="base.html"><img src="{% static 'img/lg.jpeg' %}" alt="" title=""/></static/img></a>
+
+       {% else %}
+      <div id="logo" class="pull-left">
+         <a href="login.html"><img src="{% static 'img/lg.jpeg' %}" alt="" title=""/></static/img></a>
+       {% endif %}
+</div>
+
+      </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li><a href="#about">About Us</a>
+        <li class="menu-has-children"><a href="#">BizBoost</a>
+                              <ul>
+                                  <li><a href="Bwhitepaper.html">Business WhitePaper</a></li>
+                                  <li><a href="#">Our Vision</a></li>
+                                  <li><a href="#">Our Mission</a></li>
+
+                              </ul>
+                          </li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="base.html">BizBoostSocial</a>
+
+        </li>
+        <li><a href="#team">Team</a></li>
+
+        <li><a href="#contact">Contact Us</a></li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+        {% endif %}
+
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
+
+    <nav class="nav social-nav pull-right d-none d-lg-inline">
+      <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+    </nav>
+    <!-- #header -->
+
+    <!-- About -->
+
+    <section class="about" id="about">
+      <div class="container text-center">
+        <h2>
+          Small Business, Big Ambitions: Let BizBoost Make it Happen!
+
+        </h2>
+        <h3> Redefining Finance, Revitalizing Dreams!</h3>
+
+        <p>
+          Revolutionizing small business financing with our innovative and socially interactive P2P platform,   <br>
+          connecting entrepreneurs with investors and service providers. <br>
+          Say goodbye to traditional constraints and hello to a dynamic ecosystem for growth and success.
+
+          <br> Lender or SME just Answer a few questions about yourself, <br>
+          and find yourself in a highly interactive social media platform.<br>
+          Start networking today to build your tomorrow!
+        </p>
+
+        <div class="row stats-row">
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">420</span> Satisfied Customers
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">369</span> SME
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">33</span> Accredited Investors
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">99</span> Business Services
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About -->
+    <!-- Parallax -->
+
+<div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="{% static 'img/first.gif' %}" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+
+    <h2>
+     <br> The go-to platform for entrepreneurs, freelancers, and small businesses alike.<br>
+    </h2>
+
+    <p>
+     <br> BizBoost Business Services -A business-focused social media platform catering specifically to peer-to-peer (P2P) needs.<br>
+       <br>We are a centralized hub for professionals to connect, collaborate, and exchange peer to peer services.<br>
+    </p>
+    <br>"BizBoost Business Advisory - Inimitable Robo Advisory" <br>
+  </div>
+  <!-- /Parallax -->
+  <!-- Features -->
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="text-center">
+        Unlock Your Business Potential with BizBoost's Innovative P2P Platform!
+      </h2>
+
+      <div class="row">
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-rocket"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                AI guided Matchmaking strategy to connect the right SME with most suitable Investors.
+              </h3>
+
+              <p>
+                 BizBoost - Where Capital Finds Purpose!" - Invest in a purpose-driven future with BizBoost's capital solutions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-envelope"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                ROBO Advisory
+              </h3>
+
+              <p>
+                AI & ML based Advisory guided by an experienced team.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-bell"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                Enhanced Risk Assessment and Management Procedures
+              </h3>
+
+              <p>
+                Robo Advisors guided by professional Business Strategy managers, loaded with Innovative Ideas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-database"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                Good Documentation & Enhanced Due diligence
+              </h3>
+
+              <p>
+                State of the Art P2P lightening network
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-cutlery"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                100% Transparency
+              </h3>
+
+              <p>
+                __ Get to Know your Peers, join BizBoost Social App __
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="feature-icon">
+                <span class="fa fa-dashboard"></span>
+              </div>
+            </div>
+
+            <div>
+              <h3>
+                __ Secure Investment__
+              </h3>
+
+              <p>
+                Cryptic Enhanced Security
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Features -->
+  <!-- Call to Action -->
+
+  <section class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+          <h2>
+            Join Us Today
+          </h2>
+
+          <p>
+            A first of its kind, enjoy a Business Social media app for all your P2P needs.
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+          <a class="btn btn-ghost" href="register.html">Create Your Account</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Call to Action -->
+  <!-- Portfolio -->
+
+  <section class="portfolio" id="portfolio">
+    <div class="container text-center">
+      <h2>
+        Join Our P2P lending focused Social Media Today
+      </h2>
+
+      <p>
+        BizBoost redefines the lending landscape by prioritizing accessibility and social connectivity,<br>
+        setting itself apart from competitors.
+
+
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/pp.png"%}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+
+                  </h3>
+
+                  <p class="card-text">
+                    Cryptic trust building
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/fx.png"%}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+
+                  </h3>
+
+                  <p class="card-text">
+                    BizBoost #1trusted P2P source
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/p2p_l.jpeg"%}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+
+                  </h3>
+
+                  <p class="card-text">
+                    Social Network for P2P Business
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/anythin.jpeg"%}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+
+                  </h3>
+
+                  <p class="card-text">
+                    Lets build trust and partnership
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/ppp.png" %}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Interactice link to future P2p Client Platform
+                  </h3>
+
+                  <p class="card-text">
+                    Write something
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/4.webp" %}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    A Cryptic Future
+                  </h3>
+
+                  <p class="card-text">
+
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/2nd.webp" %}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Learn How P2P works
+                  </h3>
+
+                  <p class="card-text">
+                   Education Center
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <a href="#"><img alt="" src={% static "img/5.gif" %}>
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Cryotography and Proof of Stake
+                  </h3>
+
+                  <p class="card-text">
+                    Let our Robo Advisor chose the perfect match for you!
+
+                  </p>
+                </div>
+              </div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Portfolio -->
+  <!-- Team -->
+
+  <section class="team" id="team">
+    <div class="container">
+      <h2 class="text-center">
+        Meet our team
+      </h2>
+
+      <div class="row">
+        <div class="col-sm-3 col-xs-6">
+          <div class="card card-block">
+            <a href="#"><img alt="" class="team-img" src={% static "img/Christina.png" %}>
+              <div class="card-title-wrap">
+                <span class="card-title">Christina Ashby</span> <span class="card-text">Executive Director-FinTech</span>
+              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                </nav>
+
+                <p>
+
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <div class="card card-block">
+            <a href="#"><img alt="" class="team-img" src={% static "img/mukit.png" %}>
+              <div class="card-title-wrap">
+                <span class="card-title">Mukit Alam</span> <span class="card-text">Financial Analyst-FinTech</span>              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                </nav>
+                <p>
+
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <div class="card card-block">
+            <a href="#"><img alt="" class="team-img" src={% static "img/Kensie.png" %}>
+              <div class="card-title-wrap">
+                <span class="card-title">Kenise Turnquest</span> <span class="card-text">Financial Director-FinTech</span>
+              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                </nav>
+
+                <p>
+
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+
+        <p>
+
+        </p>
+      </div>
+      </a>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- /Team -->
+  <!-- @component: footer -->
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="section-title">Contact Us</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-4">
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>420 Fools Street<br>New York, NY 535022</p>
+            </div>
+
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p>info@ucfPortfolioAdvisory.com</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+1 888 000 420</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-left text-center">
+            <p class="copyright-text">
+              © UCF BizBoost Team
+            </p>
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+              -->
+              Designed by <a >UCF BizBoost TEAM</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#contact">Home</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#about">About Us</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#features">Features</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="Bizzer.html">Portfolio</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#team">Team</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js" ></script>
+  <script src={% static "lib/jquery/jquery-migrate.min.js"%}></script>
+  <script src={% static "lib/superfish/hoverIntent.js"%}></script>
+  <script src={% static "lib/superfish/superfish.min.js"%}></script>
+  <script src={% static "lib/tether/js/tether.min.js"%}></script>
+  <script src={% static "lib/stellar/stellar.min.js"%}></script>
+  <script src={% static "lib/bootstrap/js/bootstrap.bundle.min.js"%}></script>
+  <script src={% static "lib/counterup/counterup.min.js"%}></script>
+  <script src={% static "lib/waypoints/waypoints.min.js"%}></script>
+  <script src={% static "lib/easing/easing.js"%}></script>
+  <script src={% static "lib/stickyjs/sticky.js"%}></script>
+  <script src={% static "lib/parallax/parallax.js"%}></script>
+  <script src={% static "lib/lockfixed/lockfixed.min.js" %}></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src={% static "js/custom.js" %}></script>
+
+  <script src={% static "contactform/contactform.js" %}></script>
+
+</html>
