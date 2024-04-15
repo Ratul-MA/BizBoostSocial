@@ -1,0 +1,25 @@
+<!-- p2p_network/templates/p2p_network/make_transaction.html -->
+
+<form method="post">
+    {% csrf_token %}
+    <label for="receiver_username">Receiver Username:</label>
+    <input type="text" name="receiver_username">
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount">
+    <button type="submit">Send</button>
+</form>
+<!-- p2p_network/templates/p2p_network/view_transactions.html -->
+
+<h2>Sent Transactions</h2>
+<ul>
+    {% for transaction in sent_transactions %}
+        <li>{{ transaction.receiver.username }} - {{ transaction.amount }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Received Transactions</h2>
+<ul>
+    {% for transaction in received_transactions %}
+        <li>{{ transaction.sender.username }} - {{ transaction.amount }}</li>
+    {% endfor %}
+</ul>
