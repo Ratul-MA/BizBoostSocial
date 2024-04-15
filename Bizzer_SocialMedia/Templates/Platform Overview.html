@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizBoost Platform Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BizBoost Platform Overview</h1>
+        <p>This is an overview of our web application called BizBoost, aiming to create a dynamic P2P social networking platform. Built on Django, a powerful Python web framework, BizBoost offers a range of features designed to enhance user interaction and connectivity within a social and business-oriented environment.</p>
+
+        <h2>Functionality:</h2>
+        <ol>
+            <li>
+                <h3>User Authentication:</h3>
+                <ul>
+                    <li>Users can easily sign up, log in, and securely log out.</li>
+                    <li>Leveraging Django's authentication system, user accounts are managed efficiently.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Profile Management:</h3>
+                <ul>
+                    <li>Every user has a customizable profile.</li>
+                    <li>Users can update their profiles, adding details like bio, industry, investment preferences, and profile pictures.</li>
+                    <li>Profile updates are handled through specific views, utilizing Django forms for validation and data management.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Beeps:</h3>
+                <ul>
+                    <li>Beeps are short messages users can post, facilitating quick updates and sharing.</li>
+                    <li>The platform's main feed, managed through the <code>Bizzer</code> view, displays these beeps.</li>
+                    <li>Users can engage with beeps by liking them, with the platform tracking the number of likes each beep receives.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Following Users:</h3>
+                <ul>
+                    <li>Users can follow and unfollow other users, fostering connections and community.</li>
+                    <li>The <code>profile</code> view allows users to explore and interact with other users' profiles, follow or unfollow them, and view their posted beeps.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Peer-to-Peer Transactions:</h3>
+                <ul>
+                    <li>BizBoost facilitates secure transactions between users.</li>
+                    <li>The <code>make_transaction</code> view enables users to initiate transactions, specifying the recipient, amount, and memo.</li>
+                    <li>The <code>view_transactions</code> view displays transaction histories, providing transparency and accountability.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Usage:</h2>
+        <ol>
+            <li>
+                <h3>User Registration and Authentication:</h3>
+                <ul>
+                    <li>New users can sign up easily, providing necessary details like username, email, and password.</li>
+                    <li>Once registered, users can securely log in to access all features.</li>
+                    <li>Authentication ensures that only logged-in users can access certain functionalities, maintaining privacy and security.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Profile Management:</h3>
+                <ul>
+                    <li>Users can personalize their profiles, adding information that enhances their presence on the platform.</li>
+                    <li>Updating profiles allows users to provide context about themselves, fostering better connections with others.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Social Interaction:</h3>
+                <ul>
+                    <li>Users can engage with each other through following, liking, and commenting on beeps.</li>
+                    <li>Following other users enables users to stay updated on their activities and interests, fostering a vibrant community.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Transaction Handling:</h3>
+                <ul>
+                    <li>BizBoost's peer-to-peer network facilitates secure transactions between users.</li>
+                    <li>Users can transfer funds securely and keep track of their transaction history within the platform.</li>
+                    <li>In the future all P2P contracts & their respective transactions will be executed by Non-fungible tokens on the Ethereum network while adhering to  regulatory requirements. </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Conclusion:</h2>
+        <p>In summary, BizBoost's prototype demonstrates core functionalities essential for a P2P social networking platform. From user management to content sharing and social interaction, the platform aims to provide a seamless and engaging experience. With further development and refinement, BizBoost has the potential to evolve into a fully-fledged platform catering to diverse user needs and fostering meaningful connections within its community.</p>
+    </div>
+</body>
+</html>

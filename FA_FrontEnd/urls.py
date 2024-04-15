@@ -31,5 +31,6 @@ urlpatterns = [
     path('search/', Bizzer_SocialMedia.views.search, name='search'),
     path('Bizzer.html', Bizzer_SocialMedia.views.Bizzer),
     path('Bwhitepaper.html', Bizzer_SocialMedia.views.whitepaper, name='Business WhitePaper'),
+    path('Platform Overview.html', Bizzer_SocialMedia.views.PlatformOverview, name='Platform Overview'),
     path('p2p/', include('p2p_network.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,6 +15,11 @@ from django.shortcuts import get_object_or_404
 def whitepaper(request):
     return render(request, "Bwhitepaper.html")
 
+
+def PlatformOverview(request):
+    return render(request, "Platform Overview.html")
+
+
 def Bizzer(request):
     if request.user.is_authenticated:
         form = BeepForm(request.POST or None)

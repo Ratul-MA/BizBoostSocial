@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from p2p_network.models import Transaction
+from django.contrib import messages
+
 
 @login_required
 def make_transaction(request):
@@ -12,11 +14,14 @@ def make_transaction(request):
         try:
             receiver = User.objects.get(username=receiver_username)
         except User.DoesNotExist:
-            return render(request, 'p2p_network/make_transaction.html', {'error_message': 'Receiver username does not exist.'})
+            error_message = 'Receiver username does not exist.'
+            messages.error(request, error_message)  # Add error message
+            return render(request, 'p2p_network/make_transaction.html')
         sender = request.user
         Transaction.objects.create(sender=sender, receiver=receiver, amount=amount, memo=memo)
         return redirect('view_transactions')
     return render(request, 'p2p_network/make_transaction.html')
+
 @login_required
 def view_transactions(request):
     user = request.user
