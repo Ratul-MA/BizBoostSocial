@@ -28,9 +28,11 @@ urlpatterns = [
     path('follows/<int:pk>', Bizzer_SocialMedia.views.follows, name="follow"),
     path('delete_beep/<int:pk>', Bizzer_SocialMedia.views.delete_beep, name="delete_beep"),
     path('edit_beep/<int:pk>', Bizzer_SocialMedia.views.edit_beep, name="edit_beep"),
+    path('edit_beep.html', Bizzer_SocialMedia.views.edit_beep, name="edit_beep"),
     path('search/', Bizzer_SocialMedia.views.search, name='search'),
     path('Bizzer.html', Bizzer_SocialMedia.views.Bizzer),
     path('Bwhitepaper.html', Bizzer_SocialMedia.views.whitepaper, name='Business WhitePaper'),
     path('Platform Overview.html', Bizzer_SocialMedia.views.PlatformOverview, name='Platform Overview'),
+    path('product.html', Bizzer_SocialMedia.views.product, name='product'),
     path('p2p/', include('p2p_network.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

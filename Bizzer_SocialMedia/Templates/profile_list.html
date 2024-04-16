@@ -1,34 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-	<h1>Profile List</h1>
-<br/>
+    <div class="container">
+        <h1 class="text-center mb-5">Profile List</h1>
 
-{% if profiles %}
-	{% for profile in profiles %}
+        {% if profiles %}
+            <div class="row">
+                {% for profile in profiles|dictsortreversed:"date_modified" %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                 <br/><br/><br/>
+            {% if profile.profile_image %}
+                <img src="{{ profile.profile_image.url }}" width="120" height="120" class="rounded-circle">
+            {% else %}
+                <img src="{% static 'img/default_profile_pic.png' %}" width="120" height="120" class="rounded-circle" alt="{{ profile.user.username }}">
 
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="{% static 'img/default_profile_pic.png' %}" class="img-fluid rounded-start" alt="...">
+            <br/><br/>
+            {% endif %}
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ profile.user.username }}</h5>
+                                        <p class="card-text"><strong>Email:</strong> {{ profile.user.email }}</p>
+                                        <p class="card-text"><strong>Profile Type:</strong> {{ profile.profile_type }}</p>
+                                        <p class="card-text"><strong>Bio:</strong> {{ profile.Bio|truncatechars:100 }}</p>
+                                        <p class="card-text"><small class="text-muted">Last Update:
+                                                {{ profile.date_modified }}</small></p>
+                                        <a href="{% url 'profile' profile.user.id %}"
+                                           class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center">No profiles available.</p>
+        {% endif %}
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{ profile.user.username }}</h5>
-        <p class="card-text"><a href="{% url 'profile' profile.user.id %}">@{{ profile.user.username|lower }}</a></p>
-        <br/><br/>
-        <p class="card-text"><small class="text-body-secondary">Last Update: {{ profile.date_modified }}</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<br/><br/>
-
-    {% endfor %}
-
-{% endif %}
-
-
 {% endblock %}
-
-

@@ -1,10 +1,15 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group, User
 from .models import Profile, Beep
 
-from .models import Profile, Client, Transaction, Beep
+# Unregister Groups
+admin.site.unregister(Group)
 
 
-# Register your models here.
+# Mix Profile info into User info
+class ProfileInline(admin.StackedInline):
+    model = Profile
+
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):

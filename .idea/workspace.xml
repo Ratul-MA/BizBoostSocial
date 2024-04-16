@@ -53,42 +53,42 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2WjaELGb0RJkaVSlI61KPOR4kfs" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.BizBoost_prototype.executor": "Run",
-    "Django Server.FA_FrontEnd.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mukitalam/Documents/FA_FrontEnd-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "PyConsoleConfigurable.Python Console",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.BizBoost_prototype.executor&quot;: &quot;Run&quot;,
+    &quot;Django Server.FA_FrontEnd.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mukitalam/Documents/FA_FrontEnd-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;PyConsoleConfigurable.Python Console&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="BizBoost" sdk-home="$USER_HOME$/opt/anaconda3/bin/python3">
@@ -166,8 +166,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django Server.FA_FrontEnd" />
       <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Django Server.FA_FrontEnd" />
     </list>
     <recent_temporary>
       <list>
@@ -223,7 +223,58 @@
       <workItem from="1713117439759" duration="4198000" />
       <workItem from="1713122049078" duration="21615000" />
       <workItem from="1713146557783" duration="288000" />
+      <workItem from="1713146854675" duration="16223000" />
+      <workItem from="1713214270558" duration="17308000" />
     </task>
+    <task id="LOCAL-00001" summary="P2P Network Included">
+      <option name="closed" value="true" />
+      <created>1713171132363</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713171132363</updated>
+    </task>
+    <task id="LOCAL-00002" summary="P2P Network Included">
+      <option name="closed" value="true" />
+      <created>1713171152397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713171152397</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Platform Overview &amp; Business Whitepaper&#10;Modification to p2p transaction handling.">
+      <option name="closed" value="true" />
+      <created>1713201648983</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713201648983</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Platform Overview &amp; Business Whitepaper&#10;Modification to p2p transaction handling.">
+      <option name="closed" value="true" />
+      <created>1713201651091</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713201651091</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Platform Overview &amp; Business Whitepaper&#10;Modification to p2p transaction handling.">
+      <option name="closed" value="true" />
+      <created>1713201713369</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713201713369</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Products info Page">
+      <option name="closed" value="true" />
+      <created>1713229237320</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713229237320</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,9 +293,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="2nd Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd Update" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="P2P Network Included" />
+    <MESSAGE value="Platform Overview &amp; Business Whitepaper&#10;Modification to p2p transaction handling." />
+    <MESSAGE value="Added Products info Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Products info Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

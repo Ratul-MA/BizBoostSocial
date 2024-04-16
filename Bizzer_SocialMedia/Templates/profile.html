@@ -8,9 +8,6 @@
     <div class="row">
         <div class="col-8">
             <h1>{{ profile.user.username }}'s Profile</h1>
-<p><strong>Bio:</strong> {{ profile.Bio }}</p>
-    <p><strong>Profile Type:</strong> {{ profile.profile_type }}</p>
-    <p><strong>Email:</strong> {{ profile.user.email }}</p>
             <br/>
             {% if beeps %}
                 {% for beep in beeps %}
@@ -79,10 +76,12 @@
 				{% endif %}
 <br/><br/>
 
-{% if profile.profile_bio %}
-	<p align="justify">
-		{{profile.profile_bio }}
+{% if profile.Bio %}
+	<p align="center">
+		{{profile.Bio }}
 	</p>
+    <p><strong>Profile Type:</strong> {{ profile.profile_type }}</p>
+    <p><strong>Email:</strong> {{ profile.user.email }}</p>
 {% endif %}
 
 

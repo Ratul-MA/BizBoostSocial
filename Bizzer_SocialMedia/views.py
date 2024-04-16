@@ -20,6 +20,10 @@ def PlatformOverview(request):
     return render(request, "Platform Overview.html")
 
 
+def product(request):
+    return render(request, "product.html")
+
+
 def Bizzer(request):
     if request.user.is_authenticated:
         form = BeepForm(request.POST or None)
@@ -129,7 +133,7 @@ def update_user(request):
 
             login(request, current_user)
             messages.success(request, ("Your Profile Has Been Updated!"))
-            return redirect('Bizzer')
+            return redirect('profile.html')
 
         return render(request, "update_user.html", {'user_form': user_form, 'profile_form': profile_form})
     else:
@@ -194,17 +198,17 @@ def edit_beep(request, pk):
                     beep.user = request.user
                     beep.save()
                     messages.success(request, ("Your beep Has Been Updated!"))
-                    return redirect('Bizzer.html')
+                    return redirect('base.html')
             else:
                 return render(request, "edit_beep.html", {'form': form, 'beep': beep})
 
         else:
             messages.success(request, ("You Don't Own That beep!!"))
-            return redirect('Bizzer.html')
+            return redirect('profile.html')
 
     else:
         messages.success(request, ("Please Log In To Continue..."))
-        return redirect('Bizzer.html')
+        return redirect('base.html')
 
 
 def search(request):
